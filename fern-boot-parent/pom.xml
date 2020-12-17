@@ -3,14 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>fern-starter-parent</artifactId>
         <groupId>dev.yidafu.fern.boot</groupId>
+        <artifactId>fern-boot-dependencies</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../fern-boot-dependencies</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>fern-start-parent</artifactId>
+    <artifactId>fern-boot-parent</artifactId>
     <packaging>pom</packaging>
 
     <properties>
@@ -21,11 +21,11 @@
 
 
     <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.projectlombok</groupId>-->
+<!--            <artifactId>lombok</artifactId>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>
@@ -50,46 +50,46 @@
                 <artifactId>maven-deploy-plugin</artifactId>
             </plugin>
 
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>default-prepare-agent</id>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>default-report</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>default-check</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <!-- @see http://www.eclemma.org/jacoco/trunk/doc/check-mojo.html -->
-                        <configuration>
-                            <rules>
-                                <rule>
-                                    <element>CLASS</element>
-                                    <excludes>
-                                        <exclude>*Test</exclude>
-                                        <exclude>*Tests</exclude>
-                                        <exclude>*DO</exclude>
-                                        <exclude>*Dto</exclude>
-                                        <exclude>*Properties</exclude>
-                                    </excludes>
-                                </rule>
-                            </rules>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.jacoco</groupId>-->
+<!--                <artifactId>jacoco-maven-plugin</artifactId>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>default-prepare-agent</id>-->
+<!--                        <goals>-->
+<!--                            <goal>prepare-agent</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>default-report</id>-->
+<!--                        <phase>prepare-package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>report</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>default-check</id>-->
+<!--                        <goals>-->
+<!--                            <goal>check</goal>-->
+<!--                        </goals>-->
+<!--                        &lt;!&ndash; @see http://www.eclemma.org/jacoco/trunk/doc/check-mojo.html &ndash;&gt;-->
+<!--                        <configuration>-->
+<!--                            <rules>-->
+<!--                                <rule>-->
+<!--                                    <element>CLASS</element>-->
+<!--                                    <excludes>-->
+<!--                                        <exclude>*Test</exclude>-->
+<!--                                        <exclude>*Tests</exclude>-->
+<!--                                        <exclude>*DO</exclude>-->
+<!--                                        <exclude>*Dto</exclude>-->
+<!--                                        <exclude>*Properties</exclude>-->
+<!--                                    </excludes>-->
+<!--                                </rule>-->
+<!--                            </rules>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
